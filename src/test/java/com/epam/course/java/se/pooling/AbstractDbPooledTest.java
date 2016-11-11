@@ -33,7 +33,7 @@ public abstract class AbstractDbPooledTest {
             final ResultSet resultSet = statement.executeQuery("SELECT id, name FROM unit8schema.author");
 
             while (resultSet.next()) {
-                System.out.printf("Author[id: %d, name: %s]\n", resultSet.getInt("id"), resultSet.getString("name"));
+                System.out.printf("AuthorDto[id: %d, name: %s]\n", resultSet.getInt("id"), resultSet.getString("name"));
             }
         }
     }

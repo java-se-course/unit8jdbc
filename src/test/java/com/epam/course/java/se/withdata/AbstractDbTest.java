@@ -47,7 +47,7 @@ public abstract class AbstractDbTest {
     @Test
     public void test1() throws SQLException {
         try (Connection connection = getDataSource().getConnection()) {
-            final int readerId = insertReader(connection, "Reader 1");
+            final int readerId = insertReader(connection, "ReaderDto 1");
 
             takeBook(connection, readerId, "Корона пастуха");
             takeBook(connection, readerId, "Эгоистичный ген");
@@ -63,7 +63,7 @@ public abstract class AbstractDbTest {
     @Test
     public void test2() throws SQLException {
         try (Connection connection = getDataSource().getConnection()) {
-            final int readerId = insertReader(connection, "Reader 2");
+            final int readerId = insertReader(connection, "ReaderDto 2");
 
             takeBook(connection, readerId, "Бог как иллюзия");
             takeBook(connection, readerId, "Патриот");

@@ -47,18 +47,18 @@ public class PostgreSqlBase {
             final ResultSet resultSet = select.executeQuery();
 
             while (resultSet.next()) {
-                System.out.printf("Author[id: %d, name: %s]\n", resultSet.getInt("id"), resultSet.getString("name"));
+                System.out.printf("AuthorDto[id: %d, name: %s]\n", resultSet.getInt("id"), resultSet.getString("name"));
             }
 
             resultSet.beforeFirst();
 
             while (resultSet.next()) {
-                System.out.printf("Author[id: %d, name: %s]\n", resultSet.getInt("id"), resultSet.getString("name"));
+                System.out.printf("AuthorDto[id: %d, name: %s]\n", resultSet.getInt("id"), resultSet.getString("name"));
             }
 
             resultSet.afterLast();
             while (resultSet.previous()) {
-                System.out.printf("Author[id: %d, name: %s]\n", resultSet.getInt("id"), resultSet.getString("name"));
+                System.out.printf("AuthorDto[id: %d, name: %s]\n", resultSet.getInt("id"), resultSet.getString("name"));
                 resultSet.updateString("name", resultSet.getString("name") + "!");
                 resultSet.updateRow();
             }
@@ -74,7 +74,7 @@ public class PostgreSqlBase {
             System.out.println("Result Set 2");
 
             while (resultSet2.next()) {
-                System.out.printf("Author[id: %d, name: %s]\n", resultSet2.getInt("id"), resultSet2.getString("name"));
+                System.out.printf("AuthorDto[id: %d, name: %s]\n", resultSet2.getInt("id"), resultSet2.getString("name"));
             }
         }
     }
@@ -109,7 +109,7 @@ public class PostgreSqlBase {
             final ResultSet resultSet = statement.executeQuery("SELECT id, name FROM unit8schema.author");
 
             while (resultSet.next()) {
-                System.out.printf("Author[id: %d, name: %s]\n", resultSet.getInt("id"), resultSet.getString("name"));
+                System.out.printf("AuthorDto[id: %d, name: %s]\n", resultSet.getInt("id"), resultSet.getString("name"));
             }
         }
     }
@@ -155,7 +155,7 @@ public class PostgreSqlBase {
             final ResultSet resultSet = statement.executeQuery("SELECT id, name FROM unit8schema.author");
 
             while (resultSet.next()) {
-                System.out.printf("Author[id: %d, name: %s]\n", resultSet.getInt("id"), resultSet.getString("name"));
+                System.out.printf("AuthorDto[id: %d, name: %s]\n", resultSet.getInt("id"), resultSet.getString("name"));
             }
         }
     }
@@ -214,7 +214,7 @@ public class PostgreSqlBase {
             final ResultSet resultSet = statement.executeQuery("SELECT id, name FROM unit8schema.author");
 
             while (resultSet.next()) {
-                System.out.printf("Author[id: %d, name: %s]\n", resultSet.getInt("id"), resultSet.getString("name"));
+                System.out.printf("AuthorDto[id: %d, name: %s]\n", resultSet.getInt("id"), resultSet.getString("name"));
             }
         }
     }
